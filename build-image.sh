@@ -9,7 +9,7 @@ if [ ! -f app/Dockerfile ] || [ ! -f app/nginx.conf ]; then
 fi
 
 read -p "请输入Docker仓库空间 (默认为 'registry.cn-chengdu.aliyuncs.com/sc-citms'): " NAME_SPACE
-NAME_SPACE=${NAME_SPACE:-registry.cn-chengdu.aliyuncs.com/citms-sc}
+NAME_SPACE=${NAME_SPACE:-registry.cn-chengdu.aliyuncs.com/sc-citms}
 
 echo "将Docker仓库空间名称: $NAME_SPACE"
 
@@ -20,8 +20,6 @@ read -p "请输入Docker镜像标签 (默认为 'latest'): " TAG
 TAG=${TAG:-latest}
 
 echo "将使用镜像名称: $NAME_SPACE/$IMAGE_NAME 和标签: $TAG"
-
-
 
 FULL_IMAGE_NAME=$NAME_SPACE/$IMAGE_NAME:$TAG
 
@@ -44,6 +42,8 @@ push_image() {
     # 推送Docker镜像
     docker push $FULL_IMAGE_NAME
 }
+
+build_image
 
 
 # 提示用户输入并读取响应
