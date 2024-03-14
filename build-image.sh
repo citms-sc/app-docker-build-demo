@@ -8,7 +8,7 @@ if [ ! -f app/Dockerfile ] || [ ! -f app/nginx.conf ]; then
     exit 1
 fi
 
-read -p "请输入Docker仓库空间 (默认为 'registry.cn-chengdu.aliyuncs.com/citms-sc'): " NAME_SPACE
+read -p "请输入Docker仓库空间 (默认为 'registry.cn-chengdu.aliyuncs.com/sc-citms'): " NAME_SPACE
 NAME_SPACE=${NAME_SPACE:-registry.cn-chengdu.aliyuncs.com/citms-sc}
 
 echo "将Docker仓库空间名称: $NAME_SPACE"
