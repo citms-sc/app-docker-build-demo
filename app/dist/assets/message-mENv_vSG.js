@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as a,a as c,M as o,f as r,t as n}from"./index-Db60hw1j.js";const p={class:"message-box"},_={__name:"message",props:{type:{type:String,default:"success"},msg:{type:String,required:!0}},setup(e){return(m,d)=>(t(),a("div",p,[c(o,{name:"Vector"}),r("span",null,n(e.msg),1)]))}},i=s(_,[["__scopeId","data-v-285a1c67"]]);export{i as default};
